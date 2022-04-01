@@ -1,7 +1,7 @@
 ; readme
 ; 1. cd ~
 ; 2. touch .zshrc_my_config
-; 3. 复制下面的代码
+; 3. 复制下面的代码到 .zshrc_my_config文件中
 ; 4. vim .zshrc
 ; 5. 添加 source ~/.zshrc_my_config
 ; 6. 保存退出
@@ -12,11 +12,15 @@
 
 function ysm() {
   local y='yarn start --module='
+  ; 获取当前branch的名称
   local branch=("${(@f)$(git rev-parse --abbrev-ref HEAD)}")
+   ; 删除符号 / 以及符号前面的字母（最小化删除）
   local left=${branch#*/}
+  ； 删除符号 - 以及符号后面的字母（最大化删除）
   local mid=${left%%-*}
   echo $y$mid
 
+  ； 执行命令
   eval $y$mid
 }
 
