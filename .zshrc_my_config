@@ -1,0 +1,44 @@
+; readme
+; 1. cd ~
+; 2. touch .zshrc_my_config
+; 3. 复制下面的代码
+; 4. vim .zshrc
+; 5. 添加 source ~/.zshrc_my_config
+; 6. 保存退出
+; 7. 执行 source .zshrc
+; 8. 重新打开vscode的命令窗口，执行ysm、ysb、yst命令即可。
+
+; 注意：比如要编译 publicRoom ，  分支名称规则：xxx/publicRoom-xxx
+
+function ysm() {
+  local y='yarn start --module='
+  local branch=("${(@f)$(git rev-parse --abbrev-ref HEAD)}")
+  local left=${branch#*/}
+  local mid=${left%%-*}
+  echo $y$mid
+
+  eval $y$mid
+}
+
+function ysb() {
+  local y='yarn build --module='
+  local branch=("${(@f)$(git rev-parse --abbrev-ref HEAD)}")
+  local left=${branch#*/}
+  local mid=${left%%-*}
+  echo $y$mid
+
+  eval $y$mid
+}
+
+function yst() {
+  local y='yarn tinypng --module='
+  local branch=("${(@f)$(git rev-parse --abbrev-ref HEAD)}")
+  ; echo $branch
+  local left=${branch#*/}
+  ; echo $left
+  local mid=${left%%-*}
+  ; echo $mid
+  echo $y$mid
+
+  eval $y$mid
+}
