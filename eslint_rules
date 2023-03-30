@@ -1,0 +1,35 @@
+vscode 安装的插件 eslint、prettier-code formatter
+
+// vscode 中 setting.json
+
+{
+  "breadcrumbs.showFiles": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.options": {
+    "extensions": [".js", ".vue", ".ts", ".tsx"]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "vue",
+    "html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "vetur.format.defaultFormatter.html": "prettier",
+  "eslint.enable": false,
+  "editor.formatOnSave": false
+}
+
+// .prettierrc 文件
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
