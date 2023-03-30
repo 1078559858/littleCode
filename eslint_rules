@@ -33,3 +33,7 @@
   "singleQuote": true,
   "trailingComma": "es5"
 }
+
+// 一些优秀的文章  
+// [彻底搞懂ESLint与Prettier在vscode中的代码自动格式化](https://juejin.cn/post/7156893291726782500)
+// [Vue项目接入Eslint+Prettier+Husky格式化代码](https://juejin.cn/post/6850037281957838855)
