@@ -2,8 +2,7 @@
 
 修改： 复制的时候，生成的是一个组件，并包含宽和高的属性。
 
-mac 步骤：
-vscode 下载 “图片文件管理” 插件 作者： kimtakuang
+mac 步骤（先下载插件）： vscode 下载 “图片文件管理” 插件 作者： kimtakuang
 
 1.  cd ./.vscode/extensions
 2.  修改插件代码
